@@ -2,7 +2,7 @@
 
 # About
 
-The bridge generator will take a Starting Number, chop it up in a large variety of smaller numbers and use the 
+The Bridge-Generator will take a Starting Number, chop it up in a large variety of smaller numbers and use the 
 pieces with addition and subtraction to reach the preferred End Number.
 
 A genetic algorithm will be used to filter, promote and reach the smallest amounts of steps to reach a fitness stressed solution that fits the End Number.
