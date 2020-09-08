@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class Main : MonoBehaviour
 {
 
+    public InputField startNumber;
+    public InputField endNumber;
+    public InputField OutputTextField;
+    public InputField populationSize;
+
     /*
     GENETIC ALGORITHM APPROACH
-
-    define two numbers, one in and one out
-    two textfields
-
-    output inline
 
     take first number and cut up in pieces, ordered, could be user defined or random like genetic code
 
@@ -29,15 +31,31 @@ public class Main : MonoBehaviour
 
     */
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        //set default numbers and texts
+        startNumber.text = "543210";
+        endNumber.text = "102343";
+        clearOutputWindow("Output window");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void goButtonPressed()
     {
+        //clear output window
+        clearOutputWindow();
 
+        //create initial population
+        //get startnumber and chop up in pieces
     }
+
+    private void clearOutputWindow(string str = "")
+    {
+        OutputTextField.text = str;
+    }
+
+    public void addTextToOutputWindow(string txt)
+    {
+        OutputTextField.text += txt + "\n";
+    }
+
 }
