@@ -6,7 +6,17 @@ using UnityEngine.UI;
 
 public class gaIndividualPiece : MonoBehaviour
 {
-    public int testvalue;
+    //what is the value?
+    public int value;
+
+    // plus or minus?
+    public int multiplier;
+
+    //set or change the random multiplier
+    public void setRandomMultiplier()
+    {
+
+    }
     /*
     public int usedNumber;
     public int usedNumberLength;
@@ -15,6 +25,5 @@ public class gaIndividualPiece : MonoBehaviour
     //chopped number from original number
     public int choppedNumber;
     //negative or positive 1, or other?
-    public int multiplier;
     */
 }

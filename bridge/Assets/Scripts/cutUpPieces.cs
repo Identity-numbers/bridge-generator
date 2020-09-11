@@ -18,10 +18,12 @@ public class cutUpPieces : MonoBehaviour
 
     public void cutItUp()
     {
+        /*
         if (startNumber == null)
         {
             Debug.Log("startNumber not set");
         }
+        */
 
         int tempNmbr = startNumber;
 

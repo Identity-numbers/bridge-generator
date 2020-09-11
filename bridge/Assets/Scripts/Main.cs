@@ -60,20 +60,21 @@ public class Main : MonoBehaviour
         clearOutputWindow();
 
         //cutUpNumbers to pieces, set class up
-        
+        cutUpNumberToPieces();
 
         //create initial population
         createPopulation();
 
         //evaluate individual and their fitnessvalue
 
-        //top half breed new population
+        //top half breed new population, this is the iteration process,
     }
 
     private void cutUpNumberToPieces()
     {
         // cut up number to full set of pieces
-
+        cutUpPieces.startNumber = int.Parse(startNumber.text);
+        cutUpPieces.cutItUp();
     }
 
     private void createPopulation()
@@ -114,7 +115,7 @@ public class Main : MonoBehaviour
         //get startnumber and chop up in pieces
     }
 
-    private void clearOutputWindow(string str = "Window cleared!")
+    private void clearOutputWindow(string str = "Window cleared!\n")
     {
         OutputTextField.text = str;
     }
