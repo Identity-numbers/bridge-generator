@@ -23,6 +23,9 @@ public class Main : MonoBehaviour
     public GameObject gaIndividual_GameObject;
     public GameObject gaIndividualPiece_GameObject;
 
+	//linked in editor
+    public cutUpPieces cutUpPieces;
+
     /*
     GENETIC ALGORITHM APPROACH
 
@@ -38,12 +41,16 @@ public class Main : MonoBehaviour
     //initialized before scene opens up
     void Start()
     {
+        
         //set default numbers and texts
         startNumber.text = "543210";
         endNumber.text = "102343";
         populationSize.text = "20";
         generationSize.text = "200";
         popStartPieces.text = "20";
+
+        //set class to gameObject
+//        cutUpPieces = cutUpsPieces_GameObject.getC
     }
 
     public void goButtonPressed()
@@ -51,6 +58,9 @@ public class Main : MonoBehaviour
         Debug.Log("go pressed");
         //clear output window
         clearOutputWindow();
+
+        //cutUpNumbers to pieces, set class up
+        
 
         //create initial population
         createPopulation();
@@ -63,6 +73,7 @@ public class Main : MonoBehaviour
     private void cutUpNumberToPieces()
     {
         // cut up number to full set of pieces
+
     }
 
     private void createPopulation()
@@ -103,7 +114,7 @@ public class Main : MonoBehaviour
         //get startnumber and chop up in pieces
     }
 
-    private void clearOutputWindow(string str = "")
+    private void clearOutputWindow(string str = "Window cleared!")
     {
         OutputTextField.text = str;
     }
