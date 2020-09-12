@@ -23,7 +23,7 @@ public class Main : MonoBehaviour
     public GameObject gaIndividual_GameObject;
     public GameObject gaIndividualPiece_GameObject;
 
-	//linked in editor
+    //linked in editor
     public cutUpPieces cutUpPieces;
 
     /*
@@ -41,16 +41,12 @@ public class Main : MonoBehaviour
     //initialized before scene opens up
     void Start()
     {
-        
         //set default numbers and texts
         startNumber.text = "543210";
         endNumber.text = "102343";
         populationSize.text = "20";
         generationSize.text = "200";
         popStartPieces.text = "20";
-
-        //set class to gameObject
-//        cutUpPieces = cutUpsPieces_GameObject.getC
     }
 
     public void goButtonPressed()
@@ -66,8 +62,14 @@ public class Main : MonoBehaviour
         createPopulation();
 
         //evaluate individual and their fitnessvalue
+        setFittnessValue();
 
         //top half breed new population, this is the iteration process,
+    }
+
+    public void setFittnessValue()
+    {
+        //TODO
     }
 
     private void cutUpNumberToPieces()
@@ -100,6 +102,7 @@ public class Main : MonoBehaviour
                 popIndPieces.gameObject.transform.parent = popInd.gameObject.transform;
 
                 //modify gap
+                //TODO
 
                 //list of parts added to individual
                 popInd.indPiecesList.Add(popIndPieces);
@@ -108,8 +111,6 @@ public class Main : MonoBehaviour
             //list of individuals added to population
             pop.gaCollectionArr.Add(popInd);
         }
-        //TODO
-        //take first number and cut up in pieces, ordered, could be user defined or random like genetic code
 
         //bread population with individuals
         //get startnumber and chop up in pieces
